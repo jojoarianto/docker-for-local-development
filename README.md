@@ -44,7 +44,7 @@ Cheatsheet
 ### Mysql 
 ```bash
 docker run --rm \
-   --name local_mysql
+   --name local_mysql \
    -v mysql_data:/var/lib/mysql \
    -e MYSQL_ROOT_PASSWORD=secret \
    -p 3306:3306 \
@@ -67,6 +67,7 @@ docker run --rm \
    --name local_postgres \
    -e POSTGRES_PASSWORD=secret \
    -v postgres_data:/var/lib/postgresql/data \
+   -p 5432:5432 \
    -d postgres
 ```
 Official images of postgresql : https://hub.docker.com/_/postgres
