@@ -46,13 +46,13 @@ Cheatsheet
 docker run --rm \
    --name local_mysql \
    -v mysql_data:/var/lib/mysql \
-   -e MYSQL_ROOT_PASSWORD=secret \
+   -e MYSQL_ROOT_PASSWORD=mysecret \
    -p 3306:3306 \
    -d mysql
 ```
 or in oneline command
 ```
-docker run --rm --name local_mysql -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=user123 -p 3306:3306 -d mysql
+docker run --rm --name local_mysql -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mysecret -p 3306:3306 -d mysql
 ```
 to stop container run
 ```
@@ -65,9 +65,10 @@ Official Images : https://hub.docker.com/_/mysql
 ```
 docker run --rm \
    --name local_postgres \
+   -e POSTGRES_USER=root \
    -e POSTGRES_PASSWORD=secret \
-   -v postgres_data:/var/lib/postgresql/data \
    -p 5432:5432 \
+   -v postgres_volumes:/var/lib/postgresql \
    -d postgres
 ```
 Official images of postgresql : https://hub.docker.com/_/postgres
