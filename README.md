@@ -68,7 +68,7 @@ docker run --rm \
    -e POSTGRES_USER=root \
    -e POSTGRES_PASSWORD=secret \
    -p 5432:5432 \
-   -v postgres_volumes:/var/lib/postgresql \
+   -v postgres_data:/var/lib/postgresql \
    -d postgres
 ```
 Official images of postgresql : https://hub.docker.com/_/postgres
@@ -87,7 +87,10 @@ Official Images of mongodb : https://hub.docker.com/_/mongo
 
 ### Redis
 ```
-docker run --rm -p 6379:6379 --name local_redis -d redis
+docker run --rm \
+   -p 6379:6379 \
+   --name local_redis \
+   -d redis
 ```
 Official images of  redis : https://hub.docker.com/_/redis
 
