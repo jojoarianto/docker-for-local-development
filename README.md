@@ -42,18 +42,21 @@ Cheatsheet and explanation how to use docker for local development
 # Script
 Cheatsheet
 ### Mysql 
+mysql version 5.7
 ```bash
 docker run --rm \
    --name local_mysql \
    -v mysql_data:/var/lib/mysql \
    -e MYSQL_ROOT_PASSWORD=secret \
    -p 3306:3306 \
-   -d mysql
+   -d mysql:5.7
 ```
+
 or in oneline command
 ```
 docker run --rm --name local_mysql -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -p 3306:3306 -d mysql
 ```
+
 to stop container run
 ```
 docker stop local_mysql
