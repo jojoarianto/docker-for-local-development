@@ -7,6 +7,11 @@ Cheatsheet and explanation how to use docker for local development
 ## Inspired by : 
 - [Hackernoon - Dont install postgres docker pull postgres](https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198).
 
+## Todo : 
+- Mysql
+- Postgresql
+- Mongodb
+- Redis
 
 ## Docker command cheatsheet 
 
