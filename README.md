@@ -46,17 +46,22 @@ Cheatsheet
 docker run --rm \
    --name local_mysql \
    -v mysql_data:/var/lib/mysql \
-   -e MYSQL_ROOT_PASSWORD=mysecret \
+   -e MYSQL_ROOT_PASSWORD=secret \
    -p 3306:3306 \
    -d mysql
 ```
 or in oneline command
 ```
-docker run --rm --name local_mysql -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mysecret -p 3306:3306 -d mysql
+docker run --rm --name local_mysql -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -p 3306:3306 -d mysql
 ```
 to stop container run
 ```
 docker stop local_mysql
+```
+
+connect with db url
+```
+mysql://root:secret@127.0.0.1
 ```
 
 Official Images : https://hub.docker.com/_/mysql
@@ -70,6 +75,11 @@ docker run --rm \
    -p 5432:5432 \
    -v postgres_data:/var/lib/postgresql \
    -d postgres
+```
+
+connect with db url
+```
+postgresql://root:secret@127.0.0.1
 ```
 Official images of postgresql : https://hub.docker.com/_/postgres
 
@@ -91,6 +101,10 @@ docker run --rm \
    -p 6379:6379 \
    --name local_redis \
    -d redis
+```
+connect with db url 
+```
+redis://@127.0.0.1
 ```
 Official images of  redis : https://hub.docker.com/_/redis
 
