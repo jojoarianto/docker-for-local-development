@@ -2,6 +2,7 @@
 Cheatsheet and explanation how to use docker for local development
 
 ![image](https://user-images.githubusercontent.com/5858756/72198236-2c6a7a80-345d-11ea-8708-7f460f718478.png)
+
 [Docker for development - Run mysql, postgres, mongodb, redis with docker (Bahasa)](https://www.youtube.com/watch?v=yP4OHzpKjAU)
 
 ## Goal :
