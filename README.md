@@ -105,6 +105,10 @@ docker run --rm \
    -v mongodb_data:/data/db \
    -d mongo
 ```
+connect with db url
+```
+mongodb://root:secret@localhost:27017
+```
 Official Images of mongodb : https://hub.docker.com/_/mongo
 
 ### Redis
