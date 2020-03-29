@@ -111,6 +111,22 @@ mongodb://root:secret@localhost:27017
 ```
 Official Images of mongodb : https://hub.docker.com/_/mongo
 
+#### mongod-express
+mongo-express is Web-based MongoDB admin interface, written with Node.js and express (just like phpmyadmin for mysql)
+
+```
+docker run -it --rm \
+    --network bridge \
+    --name mongo-express \
+    -p 8081:8081 \
+    -e ME_CONFIG_MONGODB_SERVER="host.docker.internal" \
+    -e ME_CONFIG_MONGODB_ENABLE_ADMIN=true \
+    -e ME_CONFIG_MONGODB_URL="mongodb://root:secret@localhost:27017/?authSource=admin" \
+    -e ME_CONFIG_MONGODB_ADMINUSERNAME="root" \
+    -e ME_CONFIG_MONGODB_ADMINPASSWORD="secret" \
+    mongo-express
+```
+
 ### Redis
 ```
 docker run --rm \
